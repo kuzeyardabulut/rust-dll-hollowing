@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "projects/injector",
+    "projects/encrypt_shellcode",
+]

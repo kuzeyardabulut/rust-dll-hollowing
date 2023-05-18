@@ -1,0 +1,15 @@
+[package]
+name = "injector"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sysinfo = "0.26.4"
+obfstr = "0.3.0"
+windows-sys = {version = "0.48.0", features = ["Win32_System_Diagnostics_Debug", "Win32_System_SystemInformation", "Win32_Foundation", "Win32_System_ProcessStatus", "Win32_System_Threading", "Win32_Security", "Win32_System_Memory", "Win32_System_Diagnostics_ToolHelp", "Win32_System_SystemServices"]}
+tracing-subscriber = "0.3.17"
+tracing = "0.1.37"
+chacha20poly1305 = { version = "0.10.1", features = ["stream"] }
+anyhow = "1.0.71"
