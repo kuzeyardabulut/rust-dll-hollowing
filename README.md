@@ -10,16 +10,18 @@ This project is a Rust Workspace project consisting of two parts: "encrypt_shell
 3. Replace the BUF variable embedded in the project named "encrypt shellcode" with the shellcode you want.
 
 4. Run the "encrypt_shellcode" project by executing the following command in the project directory:
-```$ cargo run --release --bin encrypt_shellcode -- shellcode.bin```
+
+     ```$ cargo run --release --bin encrypt_shellcode -- shellcode.bin```
 
 5. Once the encryption process is complete, the encrypted shellcode will be printed and saved as a .bin file in the project directory.
 
 5. Then we will change the shellcode in the BUF variable in the project named "injector".
 
-6. Run the "Injector" project and enter the path of a .dll file running in the target process to inject the encrypted shellcode into the target process.
-```$ cargo run --release --bin injector -- C:\Windows\System32\amsi.dll```
+6. Run the "Injector" project and enter the path of a .dll file running in the target process to inject the encrypted shellcode into the target process. 
 
-Note: If you want to change the target process, change the variable TARGET_PROCESS_NAME inside the "Injector" project.
+     Note: If you want to change the target process, change the variable TARGET_PROCESS_NAME inside the "Injector" project.
+
+     ```$ cargo run --release --bin injector -- C:\Windows\System32\amsi.dll```
 
 7. The "injector" project will decrypt the encrypted shellcode and execute the malicious code by writing the actual shellcode to the "AddressOfEntryPoint" specified in the target DLL.
 
